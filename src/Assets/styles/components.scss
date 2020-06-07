@@ -6,14 +6,37 @@
 .Chat-page-header {
   color: white;
   padding: 0 20px;
-  line-height: 48px
+  cursor: pointer;
+  line-height: 48px;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 20px;
+  }
 }
 .Chat-list-container {
   flex: 1;
   border-right: 1px solid $color-light-grey;
 }
 
+.Chat-page-container {
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  @include displayFlex;
+  flex-direction: column;
+  .chat-contents {
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
 
+
+
+// Chat box styles
 .Chat-box {
   padding: 15px 10px;
   border-top: 1px solid $color-light-grey;
@@ -26,6 +49,9 @@
     .info {
       em, p { color: white }
     }
+  }
+  &:first-child {
+    border-top: none;
   }
   img {
     border-radius: 50%;
@@ -44,6 +70,123 @@
       color: $color-grey;
       font-size: 14px;
       margin-top: 10px;
+    }
+  }
+}
+
+.Chat-input-container {
+  padding: 20px 0;
+  @include displayFlex;
+  .input-container {
+    flex: 1;
+  }
+}
+.Chat-button {
+  margin: 0 20px;
+  width: 80px;
+  border-radius: 20px;
+  height: 40px;
+  background: $color-accent;
+  color: white;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  border:none;
+}
+.Chat-input-box {
+  @include transition(all ease .4s);
+  width: 100%;
+  border-radius: 20px;
+  height: 40px;
+  outline: none;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background: $color-primary-light;
+  &:focus {
+    background: white;
+    border-color: $color-accent;
+  }
+}
+
+// Message box
+.Message-container {
+  margin-bottom: 40px;
+  @include displayFlex;
+  img {
+    width: 45px;
+    margin: 15px;
+    height: 45px;
+    border-radius: 50%;
+  }
+}
+.Message-box {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px 0 #f0f0f0;
+  display: inline-block;
+  max-width: 300px;
+  &.sent {
+    background: $color-accent;
+    color: white
+  }
+  p {
+    line-height: 1.4;
+    font-size: 15px
+  }
+  .date {
+    font-size: 11px;
+    margin: 20px 0 0 0;
+    display: block;
+  }
+}
+
+
+.User-info-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.7);
+  }
+  .content {
+    margin: 150px auto;
+    background: white;
+    width: 500px;
+    position: relative;
+    figure {
+      width: 100%;
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.7);
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .name {
+      color: white;
+      font-size: 40px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
     }
   }
 }

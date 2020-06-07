@@ -21,6 +21,7 @@ body {
 .Chat-list-grid {
   flex: 2;
   @include displayFlex;
+  overflow-x: hidden;
   flex-direction: column;
 }
 
