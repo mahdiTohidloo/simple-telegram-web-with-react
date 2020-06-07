@@ -6,7 +6,6 @@ const ChatList = () => {
   const appContext = useContext(AppContext);
   const [selectedItem, setSelectedItem] = useState(null);
 
-
   return <>
     <header className={'Header Align-center'}>
       <h1>Simple Telegram Web With React</h1>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const ChatBox = ({ data, isActive, onSelectChat }) => {
   return (
@@ -15,6 +16,12 @@ const ChatBox = ({ data, isActive, onSelectChat }) => {
       </div>
     </Link>
   )
+};
+
+ChatBox.propTypes = {
+  data: PropTypes.object,
+  isActive: PropTypes.bool,
+  onSelectChat: PropTypes.func,
 };
 
 export default ChatBox;
