@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import {ChatMessageType} from "../../ Assets/contatns/models";
+import {ChatMessageType} from "../../Assets/contatns/models";
 
 const MessageBoxClassNameByType = {
   [ChatMessageType.sent]: {

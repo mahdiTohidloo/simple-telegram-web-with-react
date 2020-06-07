@@ -39,6 +39,7 @@ const ChatPage = () => {
 
   }, [pageParams, appContext]);
 
+  // Scroll to bottom of the container on send or receive new message
   useEffect(() => {
     if ( messagesContainerRef.current ) {
       messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
@@ -63,7 +64,7 @@ const ChatPage = () => {
     setMessage(event.target.value);
   };
 
-  const onShowUserInformation = ( messageData ) => () => {
+  const onShowUserInfoModal = ( messageData ) => () => {
     setUserInformationModalState({
       show: true,
       userData  : {
@@ -77,7 +78,7 @@ const ChatPage = () => {
 
   // console.log(chatData);
   return <>
-    <header onClick={onShowUserInformation()} className={'Header Chat-page-header'}>
+    <header onClick={onShowUserInfoModal()} className={'Header Chat-page-header'}>
       <img src={chatData.image} />
       { chatData.name }
     </header>
@@ -88,7 +89,7 @@ const ChatPage = () => {
             <MessageBox
               key={`ChatMessage${index}`}
               data={messageData}
-              onClickUserAvatar={onShowUserInformation(messageData)}
+              onClickUserAvatar={onShowUserInfoModal(messageData)}
             />
           )
         }
