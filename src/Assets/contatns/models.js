@@ -3,6 +3,16 @@ export const ChatMessageType = {
   received: 'RECEIVED'
 };
 
+export const MainUserData = {
+  type: ChatMessageType.sent,
+  senderName: 'Jon Snow',
+  senderImage: require('../images/11.jpg'),
+};
+
+export const ReplyMessageModel = {
+  type: ChatMessageType.received,
+  message: 'Hello my friend. Hope to be ok. This is a automatic reply to your message.',
+};
 
 export const ChatsDataModel = {
   totalChats: 10,
@@ -11,11 +21,15 @@ export const ChatsDataModel = {
       id: 1,
       name: 'Mahdi Tohidloo',
       image: require('../images/1.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 1,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Mahdi Tohidloo',
+          senderImage: require('../images/1.jpg'),
         }
       ]
     },
@@ -23,11 +37,15 @@ export const ChatsDataModel = {
       id: 2,
       name: 'Lana Del Ray',
       image: require('../images/2.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 2,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Lana Del Ray',
+          senderImage: require('../images/2.jpg'),
         }
       ]
     },
@@ -35,11 +53,15 @@ export const ChatsDataModel = {
       id: 3,
       name: 'Mohsen Yeganeh',
       image: require('../images/3.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 3,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Mohsen Yeganeh',
+          senderImage: require('../images/3.jpg'),
         }
       ]
     },
@@ -47,11 +69,15 @@ export const ChatsDataModel = {
       id: 4,
       name: 'Mark Zuckerberg',
       image: require('../images/4.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 4,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Mark Zuckerberg',
+          senderImage: require('../images/4.jpg'),
         }
       ]
     },
@@ -59,11 +85,15 @@ export const ChatsDataModel = {
       id: 5,
       name: 'Taylor Swift',
       image: require('../images/5.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 5,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Taylor Swift',
+          senderImage: require('../images/5.jpg'),
         }
       ]
     },
@@ -71,11 +101,15 @@ export const ChatsDataModel = {
       id: 6,
       name: 'Harry Styles',
       image: require('../images/6.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 6,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Harry Styles',
+          senderImage: require('../images/6.jpg'),
         }
       ]
     },
@@ -83,11 +117,15 @@ export const ChatsDataModel = {
       id: 7,
       name: 'Hassan Rohani',
       image: require('../images/7.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 7,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Hassan Rohani',
+          senderImage: require('../images/7.jpg'),
         }
       ]
     },
@@ -95,11 +133,15 @@ export const ChatsDataModel = {
       id: 8,
       name: 'Trump',
       image: require('../images/8.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 8,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Trump',
+          senderImage: require('../images/8.jpg'),
         }
       ]
     },
@@ -107,11 +149,15 @@ export const ChatsDataModel = {
       id: 9,
       name: 'Billie Eilish',
       image: require('../images/9.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 9,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Billie Eilish',
+          senderImage: require('../images/9.jpg'),
         }
       ]
     },
@@ -119,11 +165,15 @@ export const ChatsDataModel = {
       id: 10,
       name: 'Scarlett Johansson',
       image: require('../images/10.jpg'),
+      bio: 'Front end developer',
       chats: [
         {
-          type: ChatMessageType.sent,
+          senderId: 10,
+          type: ChatMessageType.received,
           message: 'Hello Dear User. Start the chat :)',
-          date: new Date()
+          date: new Date(),
+          senderName: 'Scarlett Johansson',
+          senderImage: require('../images/10.jpg'),
         }
       ]
     },
