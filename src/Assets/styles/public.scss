@@ -1,3 +1,36 @@
 body {
   background-color: $color-anti-flash;
+  font-family: sans-serif;
 }
+
+.Main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0px 1px 0 #dfe5ec;
+  height: 100vh;
+  overflow: hidden;
+  @include displayFlex;
+}
+
+.Chat-list-grid {
+  flex: 1;
+  @include displayFlex;
+  flex-direction: column;
+}
+
+.Chat-page-grid {
+  flex: 3;
+  @include displayFlex;
+  flex-direction: column;
+}
+
+.Header {
+  background-color: $color-primary;
+  height: 48px;
+}
+
+.Align-center {
+  text-align: center !important;
+}
+
