@@ -1,12 +1,12 @@
 import React, { useState, createContext } from 'react';
+import {ChatsDataModel} from "../Assets/contatns/models";
 
 
 export const AppContext = createContext();
 
-
 const AppContextProvider = ({ children }) => {
 
-    const [state, setState] = useState({ data: 'hello world'});
+    const [state, setState] = useState({ ...ChatsDataModel });
 
 
     return (

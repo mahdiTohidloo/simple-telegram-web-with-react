@@ -12,3 +12,38 @@
   flex: 1;
   border-right: 1px solid $color-light-grey;
 }
+
+
+.Chat-box {
+  padding: 15px 10px;
+  border-top: 1px solid $color-light-grey;
+  @include transition(all ease .3s);
+  &:hover {
+    background: $color-primary-light;
+  }
+  &.selected {
+    background-color: $color-accent;
+    .info {
+      em, p { color: white }
+    }
+  }
+  img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 15px;
+  }
+  .info {
+    em {
+      font-weight: bold;
+      font-size: 18px;
+      color: black;
+    }
+    p {
+      color: $color-grey;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}

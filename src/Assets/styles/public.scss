@@ -13,14 +13,19 @@ body {
   @include displayFlex;
 }
 
+.Ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .Chat-list-grid {
-  flex: 1;
+  flex: 2;
   @include displayFlex;
   flex-direction: column;
 }
 
 .Chat-page-grid {
-  flex: 3;
+  flex: 5;
   @include displayFlex;
   flex-direction: column;
 }

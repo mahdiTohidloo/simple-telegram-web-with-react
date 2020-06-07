@@ -1,9 +1,19 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const ChatBox = ({ id }) => {
+const ChatBox = ({ data, isActive, onSelectChat }) => {
   return (
-    <div><Link to={`/chat-page/${id}`}>hello world chat item </Link></div>
+    <Link to={`/chat-page/${data.id}`} style={{ textDecoration: 'none' }}>
+      <div onClick={() => onSelectChat(data.id)} className={`Chat-box ${isActive ? 'selected' : ''}`}>
+        <img src={data.image} alt={data.name} />
+        <div className={'info'}>
+          <em>{ data.name }</em>
+          <p className={'Ellipsis'}>
+            { data.chats[data.chats.length - 1].message}
+          </p>
+        </div>
+      </div>
+    </Link>
   )
 };
 

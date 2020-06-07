@@ -3,3 +3,10 @@
   display: -moz-box;
   display: flex;
 }
+
+@mixin transition ( $props ) {
+  -webkit-transition: $props;
+  -moz-transition: $props;
+  -o-transition: $props;
+  transition: $props;
+}
