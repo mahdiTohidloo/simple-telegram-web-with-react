@@ -20,9 +20,8 @@ const MessageBox = ({ data, onClickUserAvatar }) => {
       <div className={`Message-box ${MessageBoxClassNameByType[data.type].messageBoxClass}`}>
         <p>{ data.message }</p>
         <span className={'date'}>
-        { data.date.toLocaleString() }
-          { }
-      </span>
+          { data.date.toLocaleString() }
+        </span>
       </div>
     </div>
   );
